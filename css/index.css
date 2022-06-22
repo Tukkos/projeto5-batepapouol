@@ -1,0 +1,84 @@
+body {
+    background-color: #E5E5E5;
+    ;
+}
+
+.topo,
+.base {
+    height: 80px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+}
+
+.topo {
+    top: 0;
+}
+
+.base {
+    bottom: 0;
+}
+
+.base input {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 17px;
+    width: 80vw;
+    height: 30px;
+    font-weight: 400px;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.topo img {
+    margin-left: 22px;
+    width: 75px;
+    height: 53px;
+}
+
+.topo ion-icon {
+    margin-right: 22px;
+    width: 45px;
+    height: 45px;
+}
+
+.base ion-icon {
+    margin-right: 17px;
+    width: 35px;
+    height: 35px;
+}
+
+.corpoDeMensagens {
+    margin-top: 85px;
+}
+
+.corpoDeMensagens li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.contatoEntradaESaida {
+    background-color: #DCDCDC;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+}
+
+.mensagemPublica {
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+}
+
+.mensagemReservada {
+    background-color: #FFDEDE;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+}
+
+h2 {
+    margin-left: 15px;
+}
