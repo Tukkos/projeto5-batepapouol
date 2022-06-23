@@ -62,19 +62,19 @@
         <!-- Elementos que vão ir pro js -->
 
         <!-- Mensagem de entrada e saida -->
-        <li class="contatoEntradaESaida">
-            <p>(00:00:00) <em>${contato}</em> entra na sala...</p>
-        </li>
+        <!-- <li class="contatoEntradaESaida">
+            <p>${hora} <em>${usuario}</em> ${mensagem}</p>
+        </li> -->
 
         <!-- Mensagem publica -->
-        <li class="mensagemPublica">
-            <p>(00:00:00) ${contato} para <em>todos</em> ${mensagem}</p>
-        </li>
+        <!-- <li class="mensagemPublica">
+            <p>${hora} <em>${usuario}</em> para <em>${destinatario}:</em> ${mensagem}</p>
+        </li> -->
 
         <!-- Mensagem reservada -->
-        <li class="mensagemReservada">
-            <p>(00:00:00) ${contato} reservadamente para ${contato2}: ${mensagem}</p>
-        </li>
+        <!-- <li class="mensagemReservada">
+            <p>${hora} <em>${usuario}</em> reservadamente para <em>${destinatario}:</em> ${mensagem}</p>
+        </li> -->
     </ul>
 
     <!-- Base fixa -->
@@ -83,9 +83,10 @@
         <ion-icon name="paper-plane-outline"></ion-icon>
     </div>
 
-    <script src="https://mock-api.driven.com.br/api/v6/uol/participants "></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
 </body>
 

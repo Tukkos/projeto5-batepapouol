@@ -8,6 +8,10 @@ li p {
     margin-left: 15px;
 }
 
+em {
+    font-weight: 700;
+}
+
 .topo,
 .base {
     height: 80px;
