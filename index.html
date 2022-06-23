@@ -19,7 +19,42 @@
     <!-- Topo fixo -->
     <div class="topo">
         <img src="./imagens/logo 1.png" alt="">
-        <ion-icon name="people"></ion-icon>
+        <ion-icon name="people" onclick="abrirMenuLateral()"></ion-icon>
+    </div>
+
+    <!-- Menu lateral -->
+    <div class="overlay, escondido">
+        <ul class="menuLateral">
+            <div>
+                <h1><em>Escolha um contato para enviar mensagem</em></h1>
+            </div>
+
+            <!-- Menu contatos -->
+            <li>
+                <ion-icon name="people"></ion-icon>
+                <h1>Todos</h1>
+            </li>
+            <li>
+                <ion-icon name="person-circle"></ion-icon>
+                <h1>${contato}</h1>
+                <ion-icon name="checkmark-outline" class="offline"></ion-icon>
+            </li>
+
+            <!-- Destino da mensgem -->
+            <div>
+                <h1>Escolha a visibilidade:</h1>
+            </div>
+            <li>
+                <ion-icon name="lock-open"></ion-icon>
+                <h1>Público</h1>
+                <ion-icon name="checkmark-outline" class="offline"></ion-icon>
+            </li>
+            <li>
+                <ion-icon name="lock-closed"></ion-icon>
+                <h1>Reservadamente</h1>
+                <ion-icon name="checkmark-outline" class="offline"></ion-icon>
+            </li>
+        </ul>
     </div>
 
     <ul class="corpoDeMensagens">
@@ -27,17 +62,17 @@
 
         <!-- Mensagem de entrada e saida -->
         <li class="contatoEntradaESaida">
-            <h2>`(00:00:00) ${contato} entra na sala...`</h2>
+            <p>(00:00:00) <em>${contato}</em> entra na sala...</p>
         </li>
 
         <!-- Mensagem publica -->
         <li class="mensagemPublica">
-            <h2>`(00:00:00) ${contato} para todos ${mensagem}`</h2>
+            <p>(00:00:00) ${contato} para <em>todos</em> ${mensagem}</p>
         </li>
 
         <!-- Mensagem reservada -->
         <li class="mensagemReservada">
-            <h2>`(00:00:00) ${contato} reservadamente para ${contato2}: ${mensgem}`</h2>
+            <p>(00:00:00) ${contato} reservadamente para ${contato2}: ${mensagem}</p>
         </li>
     </ul>
 
@@ -47,6 +82,7 @@
         <ion-icon name="paper-plane-outline"></ion-icon>
     </div>
 
+    <script src="index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
