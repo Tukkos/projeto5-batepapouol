@@ -6,7 +6,6 @@ let usuario;
 
 setInterval(buscarMensagens, 3000);
 setInterval(buscarParticipantes, 10000);
-login();
 setInterval(conferirStatus, 5000);
 
 function abrirMenuLateral() {
@@ -14,12 +13,8 @@ function abrirMenuLateral() {
     overlay.classList.toggle(`escondido`);
 }
 
-function login() {
-    usuario = prompt(`Defina um nome de usuário:`);
-    mandarUsuario();
-}
-
 function mandarUsuario() {
+    usuario = document.querySelector(`.envioUsuario`).value;
     const envioLogin = {
         name: `${usuario}`
     }
@@ -30,7 +25,8 @@ function mandarUsuario() {
 }
 
 function confirmarEntrada() {
-    alert("Bem vindo ao Bate Papo Uol!")
+    const overlay = document.querySelector(`.telaInicial`);
+    overlay.classList.toggle(`escondido`);
 }
 
 function repetirLogin(error) {
