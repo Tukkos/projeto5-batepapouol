@@ -5,6 +5,7 @@ const urlMensagens = "https://mock-api.driven.com.br/api/v6/uol/messages";
 let usuario;
 
 setInterval(buscarMensagens, 3000);
+setInterval(buscarParticipantes, 10000);
 login();
 setInterval(conferirStatus, 5000);
 
@@ -94,5 +95,30 @@ function enviarMensagem() {
     }
     const promise = axios.post(urlMensagens, envioMensagem);
 
+    document.querySelector(".base>input").value = "";
+
     promise.then(buscarMensagens);
+    promise.catch(reload);
+}
+
+function reload() {
+    window.location.reload();
+}
+
+function buscarParticipantes() {
+    const promessa = axios.get(urlUsuarios);
+
+    promessa.then(participantesAtivos);
+}
+
+function participantesAtivos(dados) {
+    let menuLateral = document.querySelector(".menuParticipantes");
+    menuLateral.innerHTML = `<li><ion-icon name="people"></ion-icon><h1>Todos</h1><ion-icon name="checkmark-outline" class="offline"></ion-icon></li>`;
+
+    for (let i = 0; i < dados.data.length; i++) {
+
+        const nomes = dados.data[i].name;
+
+        menuLateral.innerHTML += `<li><ion-icon name="person-circle"></ion-icon><h1>${nomes}</h1><ion-icon name="checkmark-outline" class="offline"></ion-icon></li>`;
+    }
 }

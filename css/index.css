@@ -96,7 +96,7 @@ input:placeholder-shown {
 }
 
 .mensagemReservada {
-    word-break: break-all;
+    word-break: break-word;
     min-height: 15px;
     width: auto;
     background-color: #FFDEDE;
@@ -126,12 +126,17 @@ input:placeholder-shown {
     right: 0;
 }
 
-.menuLateral>div {
+.chamadas {
     margin: 25px 30px;
     text-align: center;
 }
 
-.menuLateral>li {
+.menuParticipantes {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuLateral li {
     display: flex;
     justify-content: flex-start;
     align-items: center;
