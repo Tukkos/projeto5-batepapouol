@@ -70,6 +70,7 @@ input:placeholder-shown {
 
 .corpoDeMensagens {
     margin-top: 85px;
+    padding-bottom: 85px;
 }
 
 .corpoDeMensagens li {
@@ -77,6 +78,8 @@ input:placeholder-shown {
 }
 
 .contatoEntradaESaida {
+    word-break: break-all;
+    min-height: 15px;
     width: auto;
     background-color: #DCDCDC;
     margin-bottom: 7px;
@@ -84,6 +87,8 @@ input:placeholder-shown {
 }
 
 .mensagemPublica {
+    word-break: break-all;
+    min-height: 15px;
     width: auto;
     background-color: #FFFFFF;
     margin-bottom: 7px;
@@ -91,6 +96,8 @@ input:placeholder-shown {
 }
 
 .mensagemReservada {
+    word-break: break-all;
+    min-height: 15px;
     width: auto;
     background-color: #FFDEDE;
     margin-bottom: 7px;

@@ -2,6 +2,8 @@ const urlUsuarios = "https://mock-api.driven.com.br/api/v6/uol/participants";
 const urlStatus = "https://mock-api.driven.com.br/api/v6/uol/status";
 const urlMensagens = "https://mock-api.driven.com.br/api/v6/uol/messages";
 
+let usuario;
+
 setInterval(buscarMensagens, 3000);
 login();
 setInterval(conferirStatus, 5000);
@@ -78,4 +80,19 @@ function renderizarMensagens(dados) {
             corpoDeMensagens.innerHTML += mensagemReservada;
         }
     }
+    corpoDeMensagens.scrollIntoView({ block: "end", behavior: "smooth" });
+}
+
+function enviarMensagem() {
+    const mensagem = document.querySelector(`.envioMensagens`).value;
+
+    const envioMensagem = {
+        from: usuario,
+        to: "Todos",
+        text: mensagem,
+        type: "message"
+    }
+    const promise = axios.post(urlMensagens, envioMensagem);
+
+    promise.then(buscarMensagens);
 }
