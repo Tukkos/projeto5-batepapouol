@@ -97,6 +97,13 @@ function enviarMensagem() {
     promise.catch(reload);
 }
 
+document.querySelector(`.envioMensagens`).addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        document.getElementById(".base>ion-icon").click();
+        document.querySelector(".base>input").value = "";
+    }
+})
+
 function reload() {
     window.location.reload();
 }
